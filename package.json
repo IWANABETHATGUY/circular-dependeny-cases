@@ -9,7 +9,9 @@
     "build:webpack": "sh webpack.sh",
     "compare": "sh compare.sh",
     "r:tr": "rspack build --config ./src/treeshaking/rspack.config.js",
-    "r:tdz": "rspack build --config ./src/tdz/rspack.config.js"
+    "r:tdz": "rspack build --config ./src/tdz/rspack.config.js",
+    "r:o": "rspack build --config ./src/order-of-eval/rspack.config.js",
+    "r:h": "rspack build --config ./src/hoisted-fn/rspack.config.js"
   },
   "keywords": [],
   "author": "",
