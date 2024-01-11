@@ -11,7 +11,8 @@
     "r:tr": "rspack build --config ./src/treeshaking/rspack.config.js",
     "r:tdz": "rspack build --config ./src/tdz/rspack.config.js",
     "r:o": "rspack build --config ./src/order-of-eval/rspack.config.js",
-    "r:h": "rspack build --config ./src/hoisted-fn/rspack.config.js"
+    "r:h": "rspack build --config ./src/hoisted-fn/rspack.config.js",
+    "r:*": "pnpm r:tr && pnpm r:tdz && pnpm r:o && pnpm r:h"
   },
   "keywords": [],
   "author": "",
