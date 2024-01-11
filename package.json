@@ -7,15 +7,18 @@
     "build:esbuild": "sh esbuild.sh",
     "build:rollup": "sh rollup.sh",
     "build:webpack": "sh webpack.sh",
-    "compare": "sh compare.sh"
+    "compare": "sh compare.sh",
+    "r:tr": "rspack build --config ./src/treeshaking/rspack.config.js",
+    "r:tdz": "rspack build --config ./src/tdz/rspack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "5.89.0",
-    "webpack-cli": "5.1.4",
+    "@rspack/cli": "^0.5.0",
+    "esbuild": "0.19.11",
     "rollup": "4.9.2",
-    "esbuild": "0.19.11"
+    "webpack": "5.89.0",
+    "webpack-cli": "5.1.4"
   }
 }

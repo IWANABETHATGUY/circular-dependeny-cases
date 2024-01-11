@@ -1,16 +1,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ([
-/* 0 */,
-/* 1 */
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/hoisted-fn/a.mjs":
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "willTDZ": () => (/* binding */ willTDZ)
+/* harmony export */   willTDZ: () => (/* binding */ willTDZ)
 /* harmony export */ });
-/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/hoisted-fn/b.mjs");
 // a -> b -> a
 
 console.log('a.mjs evaluating')
@@ -32,15 +32,16 @@ function willTDZ() {
 
 
 /***/ }),
-/* 2 */
+
+/***/ "./src/hoisted-fn/b.mjs":
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "willTDZ": () => (/* binding */ willTDZ)
+/* harmony export */   willTDZ: () => (/* binding */ willTDZ)
 /* harmony export */ });
-/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/hoisted-fn/a.mjs");
 // b -> a -> b
 
 console.log('b.mjs evaluating')
@@ -62,7 +63,8 @@ function willTDZ() {
 
 
 /***/ })
-/******/ 	]);
+
+/******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
@@ -122,8 +124,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/hoisted-fn/a.mjs");
+/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/hoisted-fn/b.mjs");
 
 
 

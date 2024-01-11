@@ -1,0 +1,1 @@
+{"version":3,"file":"a.js","sources":["./entry-a.mjs"],"sourcesContent":["import * as a from './a.mjs';\nimport * as b from './b.mjs';\n"],"names":[],"mappings":";;;;;AAA6B;AACA"}

@@ -1,38 +1,15 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ([
-/* 0 */,
-/* 1 */
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/tdz/a.mjs":
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "b": () => (/* binding */ b)
+/* harmony export */   a: () => (/* binding */ a)
 /* harmony export */ });
-/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-// b -> a -> b
-
-console.log('evaluating b.mjs');
-
-const b = (() => {
-    try {
-        return _a_mjs__WEBPACK_IMPORTED_MODULE_0__.a
-    } catch {
-        console.error('a is in TDZ');
-        process.exit(1);
-    }
-})() + 1;
-
-
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": () => (/* binding */ a)
-/* harmony export */ });
-/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/tdz/b.mjs");
 // a -> b -> a
 
 console.log('evaluating a.mjs');
@@ -47,8 +24,33 @@ const a = (() => {
 })() + 1;
 
 
+/***/ }),
+
+/***/ "./src/tdz/b.mjs":
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   b: () => (/* binding */ b)
+/* harmony export */ });
+/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/tdz/a.mjs");
+// b -> a -> b
+
+console.log('evaluating b.mjs');
+
+const b = (() => {
+    try {
+        return _a_mjs__WEBPACK_IMPORTED_MODULE_0__.a
+    } catch {
+        console.error('a is in TDZ');
+        process.exit(1);
+    }
+})() + 1;
+
+
 /***/ })
-/******/ 	]);
+
+/******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
@@ -108,8 +110,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _b_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/tdz/b.mjs");
+/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/tdz/a.mjs");
 
 
 console.log({a: _a_mjs__WEBPACK_IMPORTED_MODULE_1__.a, b: _b_mjs__WEBPACK_IMPORTED_MODULE_0__.b})
